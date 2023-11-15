@@ -26,7 +26,7 @@ jobs:
           tag: 1.0.9
           path: . # Default charts/{name}
           registry: ghcr.io
-          registry_username: ${{ secrets.REGISTRY_USER }}
-          registry_password: ${{ secrets.REGISTRY_TOKEN }}
-          update_dependencies: 'true' # Defaults to false
+          registry_username: ${{ github.user }}
+          registry_password: ${{ github.token }}
+          update_dependencies: 'true' # Defaultz to false
 
